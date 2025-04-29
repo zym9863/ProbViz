@@ -1,0 +1,65 @@
+// 语言配置文件
+export const messages = {
+  en: {
+    appTitle: 'ProbViz - Probability Visualization',
+    lawOfLargeNumbers: 'Law of Large Numbers',
+    centralLimitTheorem: 'Central Limit Theorem',
+    simulationParameters: 'Simulation Parameters',
+    sampleSize: 'Sample Size:',
+    numberOfTrials: 'Number of Trials:',
+    probability: 'Probability:',
+    distribution: 'Distribution:',
+    mean: 'Mean:',
+    standardDeviation: 'Standard Deviation:',
+    runSimulation: 'Run Simulation',
+    uniform: 'Uniform',
+    normal: 'Normal',
+    exponential: 'Exponential',
+    binomial: 'Binomial',
+    trueProbability: 'True Probability:',
+    finalAverage: 'Final Average:',
+    difference: 'Difference:',
+    distributionLabel: 'Distribution:',
+    meanOfSampleMeans: 'Mean of Sample Means:',
+    standardDeviationLabel: 'Standard Deviation:',
+    expectedStdDev: 'Expected Std Dev:',
+    lolnDescription: 'The Law of Large Numbers states that as the number of trials increases, the average of the results will get closer to the expected value. In this simulation, we\'re flipping a coin with probability {probability} of getting heads.',
+    cltDescription: 'The Central Limit Theorem states that the distribution of sample means approaches a normal distribution as the sample size increases, regardless of the population\'s distribution. This simulation shows the distribution of sample means from a {distribution} distribution.',
+    frequency: 'Frequency',
+    cumulativeAverage: 'Cumulative Average',
+  },
+  zh: {
+    appTitle: 'ProbViz - 概率可视化',
+    lawOfLargeNumbers: '大数定律',
+    centralLimitTheorem: '中心极限定理',
+    simulationParameters: '模拟参数',
+    sampleSize: '样本大小：',
+    numberOfTrials: '试验次数：',
+    probability: '概率：',
+    distribution: '分布：',
+    mean: '均值：',
+    standardDeviation: '标准差：',
+    runSimulation: '运行模拟',
+    uniform: '均匀分布',
+    normal: '正态分布',
+    exponential: '指数分布',
+    binomial: '二项分布',
+    trueProbability: '真实概率：',
+    finalAverage: '最终平均值：',
+    difference: '差异：',
+    distributionLabel: '分布：',
+    meanOfSampleMeans: '样本均值的均值：',
+    standardDeviationLabel: '标准差：',
+    expectedStdDev: '预期标准差：',
+    lolnDescription: '大数定律表明，随着试验次数的增加，结果的平均值将越来越接近预期值。在这个模拟中，我们抛一枚硬币，其正面朝上的概率为 {probability}。',
+    cltDescription: '中心极限定理表明，随着样本量的增加，样本均值的分布趋近于正态分布，无论总体分布如何。这个模拟展示了来自{distribution}分布的样本均值的分布。',
+    frequency: '频率',
+    cumulativeAverage: '累积平均值',
+  }
+};
+
+// 默认语言
+export const defaultLocale = 'en';
+
+// 可用语言列表
+export const supportedLocales = ['en', 'zh'];
