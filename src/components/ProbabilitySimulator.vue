@@ -2,6 +2,7 @@
 import { ref, computed, onMounted, inject } from 'vue';
 import LawOfLargeNumbers from './LawOfLargeNumbers.vue';
 import CentralLimitTheorem from './CentralLimitTheorem.vue';
+import ProbabilityDistributions from './ProbabilityDistributions.vue';
 import ControlPanel from './ControlPanel.vue';
 
 // 注入翻译函数
@@ -43,6 +44,12 @@ const changeSimulation = (simulation: string) => {
       >
         {{ t('centralLimitTheorem') }}
       </button>
+      <button
+        :class="{ active: currentSimulation === 'probabilityDistributions' }"
+        @click="changeSimulation('probabilityDistributions')"
+      >
+        {{ t('probabilityDistributions') }}
+      </button>
     </div>
 
     <ControlPanel
@@ -59,6 +66,9 @@ const changeSimulation = (simulation: string) => {
       <CentralLimitTheorem
         v-else-if="currentSimulation === 'centralLimitTheorem'"
         :params="simulationParams"
+      />
+      <ProbabilityDistributions
+        v-else-if="currentSimulation === 'probabilityDistributions'"
       />
     </div>
   </div>
@@ -102,13 +112,13 @@ h1::after {
 }
 
 .simulation-selector button {
-  padding: 12px 24px;
-  margin: 0 10px;
+  padding: 12px 20px;
+  margin: 0 8px;
   border: none;
   border-radius: var(--border-radius);
   background-color: var(--bg-card);
   color: var(--text-color);
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 500;
   box-shadow: var(--box-shadow);
   position: relative;
