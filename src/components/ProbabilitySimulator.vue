@@ -3,6 +3,7 @@ import { ref, computed, onMounted, inject } from 'vue';
 import LawOfLargeNumbers from './LawOfLargeNumbers.vue';
 import CentralLimitTheorem from './CentralLimitTheorem.vue';
 import ProbabilityDistributions from './ProbabilityDistributions.vue';
+import MontyHall from './MontyHall.vue';
 import ControlPanel from './ControlPanel.vue';
 
 // 注入翻译函数
@@ -50,6 +51,12 @@ const changeSimulation = (simulation: string) => {
       >
         {{ t('probabilityDistributions') }}
       </button>
+      <button
+        :class="{ active: currentSimulation === 'montyHallProblem' }"
+        @click="changeSimulation('montyHallProblem')"
+      >
+        {{ t('montyHallProblem') }}
+      </button>
     </div>
 
     <ControlPanel
@@ -69,6 +76,10 @@ const changeSimulation = (simulation: string) => {
       />
       <ProbabilityDistributions
         v-else-if="currentSimulation === 'probabilityDistributions'"
+      />
+      <MontyHall
+        v-else-if="currentSimulation === 'montyHallProblem'"
+        :params="simulationParams"
       />
     </div>
   </div>
